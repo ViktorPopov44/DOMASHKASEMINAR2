@@ -1,13 +1,22 @@
 ﻿Console.WriteLine("Введите номер дня недели");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
 
-bool numberday(int n);
+bool Numberday(int day)
 {
-    if ( 1 <= n < 6 )
+    if ( day == 6  || day == 7 )
     {
-        Console.WriteLine("Деня не является выходным");
+        return true;
     }
-    else 
-    Console.WriteLine("Это день выходной");
+    else
+    return false;
 }
-return n;
+bool result = Numberday(dayNumber);
+
+if ( result == true )
+{
+    Console.WriteLine("Этот день выходной");
+}
+else
+Console.WriteLine("Этот день не выходной");
+
+
